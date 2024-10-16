@@ -1,0 +1,366 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for a sleek look */
+    backdrop-filter: blur(10px); /* Apply blur effect for smoothness */
+    transition: background-color 0.3s, backdrop-filter 0.3s; /* Smooth transition */
+    z-index: 1000;
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+/* Navigation Links - Unified Styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    padding-left: 45px;
+}
+
+.nav-links li {
+    position: relative; /* Ensures dropdown is aligned below each link */
+}
+
+.nav-links li a,
+.contact-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: 'Lato', serif; /* Elegant, premium font */
+    transition: color 0.3s;
+}
+
+/* Hover Effect for All Links */
+.nav-links li a:hover,
+.contact-link a:hover {
+    color: orange; /* Set a consistent hover color */
+}
+
+/* Contact Link */
+.contact-link {
+    margin-left: auto;
+    margin-right: 50px;
+    font-size: 18px;
+}
+
+/* Logo Image */
+.logo-img {
+    height: 50px;
+    width: auto;
+    margin-left: -75px;
+    margin-top: 8px;
+}
+
+.logo-container {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+    z-index: 1000;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    background: rgba(0, 0, 0, 0.85); /* Darker background */
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    padding: 2rem; /* Padding for spacing */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Optional shadow for visibility */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem; /* Add padding on both sides */
+}
+
+.dropdown-column {
+    flex: 1;
+    padding: 1rem;
+    min-width: 200px; /* Minimum width for each column */
+}
+
+.dropdown-column h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.dropdown-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.dropdown-column ul li a:hover {
+    color: orange;
+}
+
+/* Hover Effect for All Links */
+.nav-links li a:hover,
+.contact-link a:hover {
+    color: orange;
+}
+
+.navbar.black {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-links li a, .contact-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: 100; /* Set a lighter weight for a more premium feel */
+    transition: color 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/07f69199-f025-436e-9289-184adfe97b19.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.hero-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+.hero-content h1 {
+    font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 1rem;
+    font-weight: 1000;
+    font-size: 100px;
+}
+
+.hero-line {
+    border: 1px solid #FF7F00; /* Gulf orange color */
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Lato', sans-serif;
+}
+.cta-button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white; /* Ensure the text is visible */
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Adding a transition effect */
+    color: #FF7F00;
+}
+
+.cta-button:hover {
+    background-color: darkorange;
+    color: black; /* Change text color to black during hover for contrast */
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+.about-content h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+.about-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Model Variations Section */
+.models-section {
+    padding: 4rem 2rem;
+}
+.models-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+.models-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+.model-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.model-card:hover {
+    transform: translateY(-10px);
+}
+.model-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.model-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.model-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+}
+.learn-more {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 4rem 2rem;
+    background: #f0f0f0;
+    text-align: center;
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Specifications Section */
+.specifications-section {
+    padding: 4rem 2rem;
+    background: #ffffff;
+    text-align: center;
+}
+.specifications-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+.specifications-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    background: black;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+.footer-links a {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
